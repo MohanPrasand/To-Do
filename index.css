@@ -1,0 +1,304 @@
+*{
+    margin:0;
+    padding: 0;
+    --activecolor:orange;
+}
+
+*:active {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#header{
+    position: sticky;
+    width:100vw;
+    height:6vh;
+    background: var(--activecolor);
+    display: flex;
+    gap:3%;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5%;
+}
+
+#addprime{
+    position: absolute;
+    font-size: 3rem;
+    right:2%;
+    cursor: pointer;
+}
+
+#addprime img{
+    width:70%;
+    transition: 0.5s;
+}
+
+#addprime:hover img{
+    transform: rotate(90deg);
+}
+
+
+#menubtn{
+    cursor: pointer;
+    position: relative;
+    margin-left: 2%;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+#menu img{
+    position: relative;
+    height: 35px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+#name{
+    font-size:2rem;
+}
+
+#container{
+    height: 100vh;
+}
+
+
+#item{
+    display: grid;
+    min-width:40vw;
+    padding:20px 10px 10px 10px;
+    gap:5%;
+    grid-template-columns: 10% 70% 20%;
+    grid-template-rows: 100%;
+    margin-top: 2%;
+    
+}
+
+
+
+#date{
+    position: relative;
+    left: 2%;
+    color:gray;
+    font-size: 1.2rem;
+    cursor:none;
+}
+
+#date:hover{
+    color:black;
+}
+
+#check{
+    position: relative;
+    width:30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+
+}
+
+#message{
+    font-size: 1.2rem;
+    border-radius: 1% 2% 2% 1%;
+    background: rgb(222, 221, 221);
+    text-align: justify;
+}
+
+
+
+#delete{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    grid-row-start: 1;
+    grid-column-start:3 ;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#deleteimg{
+    position: relative;
+    height:80%;
+    transform-origin: center;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg); 
+    transition: 0.5s;
+}
+
+#delete:hover #deleteimg{
+    transform: translateX(-50%) translateY(-50%) rotate(45deg) rotateZ(90deg); 
+
+}
+
+
+input:checked ~ #message{
+    text-decoration: line-through rgb(13, 13, 4);
+    color: gray;
+}
+
+#container{
+    padding-bottom: 30%;
+    
+}
+
+
+#add{
+    position: fixed;
+    bottom:0%;
+    width:100vw;
+    height:80px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgb(238, 236, 236);
+    transition: 0.5s;
+}
+
+
+
+#addPage{
+    position: fixed;
+    width:80%;
+    height:30%;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(128, 128, 128, 0.316);
+    backdrop-filter: blur(5px);
+    transition: 0.4s;
+    transform-origin: left;
+    scale: 0;
+}
+
+#add>img{
+    transition: 0.5s;
+}
+
+#add:hover > img{
+    transform: rotate(90deg);
+}
+
+#newmessage{
+    position: relative;
+    resize: none;
+    width:98%;
+    height:60%;
+    font-size: 1.2rem;
+    color: rgb(46, 32, 32);
+    left:1%;
+    top:1%;
+    background: rgb(247, 246, 246);
+}
+
+#newmessage:focus{
+    outline: 0;
+    background: white;
+}
+
+#actions{
+    position: relative;
+    top:15%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5%;
+}
+
+.action{
+    position: relative;
+    transform: translateX(-5%);
+    font-size: 1.4rem;
+    border-radius: 8%;
+    margin-right: 5%;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+    width:15%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#cancel{
+    background: none;
+    border: solid 2px rgb(93, 92, 92);
+    color: rgb(93, 92, 92);
+}
+
+#save{
+    background: var(--activecolor);
+    color: white;
+}
+
+#menu{
+    position: fixed;
+    top:0;
+    left:-40%;
+    width:40%;
+    height:100%;
+    background: rgba(193, 208, 121, 0.525);
+    backdrop-filter: blur(3px);
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#menubtn img{
+    transition: 0.5s;
+    width:30px;
+    transform: translateY(30%);
+}
+
+#menubtn:hover img{
+    transform:translateY(30%) rotateY(180deg);
+}
+
+#close{
+    position: absolute;
+    top:4%;
+    left:0%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#close img{
+    transition: 1s;
+    
+}
+
+.menuitem{
+    position: relative;
+    width:100%;
+    height:5%;
+    background: rgba(222, 232, 111, 0.677);
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(2, 53, 54);
+    cursor: pointer;
+}
+
+.menuitem a{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(2, 53, 54);
+}
+
+
+
+
+
+@media only screen and (max-width:600px) {
+    .action{
+        width: 25%;
+    }
+}

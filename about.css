@@ -1,0 +1,11 @@
+body{
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    background: rgb(233, 233, 138);
+}
+
+a{
+    text-decoration: none;
+    color:blue;
+}
